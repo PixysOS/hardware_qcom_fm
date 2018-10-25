@@ -1,5 +1,5 @@
-ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-ifneq (,$(filter $(QCOM_BOARD_PLATFORMS),$(TARGET_BOARD_PLATFORM)))
+ifeq ($(BOARD_HAVE_QCOM_FM),true)
+#ifneq (,$(filter $(QCOM_BOARD_PLATFORMS),$(TARGET_BOARD_PLATFORM)))
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -40,6 +40,6 @@ LOCAL_CFLAGS += -Wno-unused-parameter
 LOCAL_MODULE := libfmjni
 include $(BUILD_SHARED_LIBRARY)
 
-endif
+#endif
 
 endif # QCOM_HARDWARE
